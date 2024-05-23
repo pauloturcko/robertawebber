@@ -1,0 +1,100 @@
+:root {
+    --laranja: #DC7E43;
+    --cinzaLogo: #3C3C3B;
+    --branco: #FFFFFF;
+    --cinzaHeader: #F2F2F2CC;
+    --cinzaBgLinks: #1D1D1D;
+    --cinzaBgSections: #272727;
+    --fonteTitulo: 'Analogist';
+    --fonteTexto: 'Inter';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Analogist';
+    src: url('../fonts/Analogist.otf') format('opentype'), url('../fonts/Analogist.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0.4rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--laranja);
+}
+
+footer {
+    background-color: var(--cinzaBgSections);
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerContainer {
+    gap: 2em;
+    color: var(--branco);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: auto;
+    padding: 1em 0;
+}
+
+.contato {
+    line-height: 1.5em;
+    text-align: center;
+    font-family: var(--fonteTexto);
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.direitos {
+    line-height: 1.5em;
+    text-align: center;
+    font-family: var(--fonteTexto);
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.neo {
+    color: var(--branco);
+    font-family: var(--fonteTexto);
+    text-decoration: underline;
+}
+
+.direitos svg {
+    fill: var(--branco);
+    width: 0.8em;
+    height: 0.8em;
+}
+
+@media screen and (min-width: 769px) {
+
+    .footerContainer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .contato {
+        text-align: start;
+    }
+
+    .direitos {
+        text-align: end;
+    }
+    
+}

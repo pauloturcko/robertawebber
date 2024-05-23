@@ -1,0 +1,197 @@
+:root {
+  --laranja: #DC7E43;
+  --cinzaLogo: #3C3C3B;
+  --branco: #FFFFFF;
+  --cinzaHeader: #F2F2F2CC;
+  --cinzaBgLinks: #1D1D1D;
+  --cinzaBgSections: #272727;
+  --fonteTitulo: 'Analogist';
+  --fonteTexto: 'Inter';
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'Analogist';
+  src: url('../fonts/Analogist.otf') format('opentype'), url('../fonts/Analogist.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--laranja);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  background-color: var(--cinzaHeader);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+a {
+  color: var(--cinzaLogo);
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+a:hover {
+  color: var(--laranja);
+  transition: 0.5s;
+  text-decoration: underline;
+}
+
+.logo {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  height: 15vh;
+  width: 95%;
+}
+
+main {
+  background-size: cover;
+  height: 85vh;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  letter-spacing: 3px;
+  margin-left: 32px;
+}
+
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: var(--laranja);
+  margin: 8px;
+  transition: 0.3s;
+}
+
+.btWpp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1em;
+  background-color: var(--laranja);
+  color: var(--branco);
+  font-family: var(--fonteTexto);
+  font-size: 0.8em;
+  font-weight: 400;
+  text-transform: uppercase;
+  border-radius: 0.5em;
+  transition: 0.3s;
+  border: 0.1em solid transparent;
+}
+
+.btWpp:hover {
+  border: 0.1em solid var(--laranja);
+  background-color: transparent;
+  color: var(--laranja);
+  transition: 0.3s;
+}
+
+@media screen and (min-width: 421px) {
+
+  .space {
+    justify-content: space-between;
+    margin: 1em 3em;
+  }
+
+}
+
+@media (max-width: 1024px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-list {
+    position: absolute;
+    top: 15vh;
+    right: 0;
+    width: 50vw;
+    height: 85vh;
+    background: var(--cinzaHeader);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+  .nav-list li {
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    opacity: 0;
+  }
+  .mobile-menu {
+    display: block;
+  }
+  .btNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+  }
+
+}
+
+.nav-list.active {
+  transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
