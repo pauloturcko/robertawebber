@@ -73,7 +73,7 @@ body {
 }
 
 .lista {
-    gap: 0.3em;
+    gap: 0.6em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -126,6 +126,7 @@ body {
     }
 
     .lista {
+        gap: 1em;
         width: 35%;
         align-items: flex-start
     }

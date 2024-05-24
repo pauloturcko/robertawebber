@@ -33,7 +33,14 @@ body {
     background-color: var(--laranja);
 }
 
+main, html {
+    background-color: var(--cinzaLogo);
+}
+
 .introContainer {
+    position: relative;
+    z-index: 1;
+    top: -14vh;
     justify-content: flex-end;
     align-items: center;
     display: flex;
@@ -101,22 +108,25 @@ body {
 @media screen and (min-width: 769px) {
 
     .introContainer {
-        justify-content: center;
+        justify-content: flex-end;
         align-items: flex-start;
         height: 720px;
         background-image: url(../img/section01Desktop.png);
     }
 
     .introContent {
-        margin: 10%;
+        align-items: start;
+        margin: 2% 10%;
         width: 40%;
     }
 
     .tituloIntro {
+        text-align: start;
         font-size: 4.5em;
     }
 
     .descricaoIntro {
+        text-align: start;
         font-size: 1.4em;
     }
 
@@ -124,12 +134,15 @@ body {
         border: 0.1em solid transparent;
         width: 75%;
         font-size: 1.5em;
+        transition: 0.3s;
     }
 
     .btIntro:hover {
+        transition: 0.3s;
+        font-weight: 800;
         text-decoration: none;
-        color: var(--branco);
-        background-color: transparent;
+        color: var(--laranja);
+        background-color: var(--branco);
         border-color: var(--branco);
     }
 

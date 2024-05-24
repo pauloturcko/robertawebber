@@ -142,9 +142,8 @@ body {
     .linksContainerDesktop {
         width: 90%;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        gap: 1em;
     }
 
     .btLinkDesktop {
@@ -168,6 +167,7 @@ body {
     }
 
     .cardLinkDesktop {
+        width: 15%;
         height: 400px;
         flex-direction: column;
         display: flex;

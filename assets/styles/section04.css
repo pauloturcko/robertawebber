@@ -154,4 +154,12 @@ body {
         height: 540px;
     }
 
+    .arrobaInstagram {
+        text-align: start;
+    }
+
+    .textoInstagram {
+        text-align: start;
+    }
+
 }

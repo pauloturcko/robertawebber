@@ -39,6 +39,8 @@ html {
 }
 
 header {
+  position: relative;
+  z-index: +99;
   background-color: var(--cinzaHeader);
   display: flex;
   justify-content: center;
@@ -59,32 +61,32 @@ a:hover {
 }
 
 .logo {
-  font-size: 24px;
   text-transform: uppercase;
-  letter-spacing: 4px;
 }
 
 nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-  height: 15vh;
-  width: 95%;
+  font-family: var(--fonteTexto);
+  height: 10vh;
+  width: 75%;
 }
 
 main {
   background-size: cover;
-  height: 85vh;
+  height: 90vh;
 }
 
 .nav-list {
+  font-size: 1.1em;
   list-style: none;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-list li {
-  letter-spacing: 3px;
   margin-left: 32px;
 }
 
