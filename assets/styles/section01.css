@@ -33,8 +33,13 @@ body {
     background-color: var(--laranja);
 }
 
-main, html {
+main,
+html {
     background-color: var(--cinzaLogo);
+}
+
+.backgroundImage {
+    display: none;
 }
 
 .introContainer {
@@ -110,30 +115,34 @@ main, html {
     .introContainer {
         justify-content: flex-end;
         align-items: flex-start;
-        height: 720px;
+        height: 100vh;
+        width: 100%;
+        background-size: cover;
+        background-position: center center;
         background-image: url(../img/section01Desktop.png);
+        background-repeat: no-repeat;
     }
 
     .introContent {
         align-items: start;
-        margin: 2% 10%;
+        margin: 3% 10%;
         width: 40%;
     }
 
     .tituloIntro {
         text-align: start;
-        font-size: 4.5em;
+        font-size: 4em;
     }
 
     .descricaoIntro {
         text-align: start;
-        font-size: 1.4em;
+        font-size: 1.2em;
     }
 
     .btIntro {
         border: 0.1em solid transparent;
         width: 75%;
-        font-size: 1.5em;
+        font-size: 1.3em;
         transition: 0.3s;
     }
 
